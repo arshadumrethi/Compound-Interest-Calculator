@@ -7,6 +7,7 @@ const intervalYearly = document.getElementById('yearly');
 const intervalQuarterly = document.getElementById('quarterly');
 const intervalMonthly = document.getElementById('monthly');
 const calculateBtn = document.getElementById('calculate');
+
 document.getElementById('loading').style.display = 'none'
 document.getElementById('results').style.display = 'none';
 
@@ -15,8 +16,6 @@ calculateBtn.addEventListener('click', function(){
     document.getElementById('loading').style.display = 'block';
     
     setTimeout(runApp, 2000);
-
-    
 
     function runApp () {
         document.getElementById('loading').style.display = 'none';
@@ -32,8 +31,8 @@ calculateBtn.addEventListener('click', function(){
             let yearlyResult = Math.round(PV * Math.pow(1 + i, n)) + annuity;
             let interestValue = yearlyResult - baseAmount.value;
             
-            document.getElementById('total-value').textContent = yearlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            document.getElementById('interest-earned').textContent = interestValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+            document.getElementById('total-value').textContent = "$" + yearlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById('interest-earned').textContent = "$" + interestValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
             document.getElementById('results').style.display = 'block';
         }
 
@@ -41,8 +40,8 @@ calculateBtn.addEventListener('click', function(){
             let quarterlyResult = Math.round(PV * Math.pow(1 + (i / 3), n * 3));
             let interestValue2 = quarterlyResult - PV;
 
-            document.getElementById('total-value').textContent = quarterlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
-            document.getElementById('interest-earned').textContent = interestValue2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+            document.getElementById('total-value').textContent = "$" + quarterlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+            document.getElementById('interest-earned').textContent = "$" + interestValue2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
             document.getElementById('results').style.display = 'block';
         }
         
@@ -50,8 +49,8 @@ calculateBtn.addEventListener('click', function(){
             let monthlyResult = Math.round(PV * Math.pow(1 + (i / 12), n * 12));
             let interestValue3 = monthlyResult - PV;
 
-            document.getElementById('total-value').textContent = monthlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
-            document.getElementById('interest-earned').textContent = interestValue3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
+            document.getElementById('total-value').textContent = "$" + monthlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById('interest-earned').textContent = "$" + interestValue3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             document.getElementById('results').style.display = 'block';
         }
         
@@ -62,7 +61,7 @@ calculateBtn.addEventListener('click', function(){
         } else if (intervalMonthly.checked == true) {
             computeMonthly()
         } else {
-            console.log('none selected')
+            
         }
 
     }

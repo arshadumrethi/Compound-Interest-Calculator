@@ -13,20 +13,13 @@
             <h3 style="color:dimgrey">Compount Interest Calculator</h3>
             <h4 style="color:dimgrey">by Arshad Umrethi</h4>
         </div>
+        <nav class="navbar">
+                <a class="nav-item nav-link" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Path to 1 Billion</a>     
+              </nav>
         <div class="row">
             <div class="col-6 mx-auto mt-3">
                 <div class="card-group">
-                    <!-- <div class="card">
-                      
-                      <div class="card-body text-right">
-                        <h5 class="card-title"></h5>
-                        <h6 class="mt-3">Base Amount:</h6>
-                        <h6 class="mt-4" >Annual Interest Rate:</h6>
-                        <h6 class="mt-4" >Calculation Period:</h6>
-                        <h6 class="mt-4" >Yearly Deposit:</h6>
-                        <h6 class="mt-4" >Compound Interval:</h6>
-                      </div>
-                    </div> -->
                     <div class="card">
                       
                       <div class="card-body">
@@ -35,36 +28,37 @@
                         
                             <div class="input-group input-group-sm">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-sm">Principal Amount</span>
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Principal :</span>
                                 </div>
-                                    <input type="text" class="form-control" id="base-amount">
+                                    <input type="text" class="form-control" id="base-amount" placeholder="Enter Amount you start with..">
                                 </div>
                        
                         
                               
-                              <div class="input-group input-group-sm mt-2">
+                              <div class="input-group input-group-sm mt-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="inputGroup-sizing-default">Interest Rate %</span>
+                                  <span class="input-group-text" id="inputGroup-sizing-default">Interest %:</span>
                                 </div>
-                                <input type="text" class="form-control" id="interest-rate">
+                                <input type="text" class="form-control" id="interest-rate" placeholder="Enter Number..">
                               </div>
                               
-                              <div class="input-group input-group-sm mt-2">
+                              <div class="input-group input-group-sm mt-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="">Period in Years :</span>
+                                  <span class="input-group-text" id="">Period:</span>
                                 </div>
-                                <input type="text" class="form-control" id="period">
+                                <input type="text" class="form-control" id="period" placeholder="Enter number of Years..">
                               </div>
 
                               <div class="input-group input-group-sm mt-3">
                                     <div class="input-group-prepend">
-                                      <span class="input-group-text" id="">Yearly Deposit :</span>
+                                      <span class="input-group-text" id="">Deposit :</span>
                                     </div>
-                                    <input type="text" class="form-control" id="deposit">
+                                    <input type="text" class="form-control" id="deposit" placeholder="Enter your annual addition to principal..">
                                   </div>
-                                
+                                  
+                                  <h6 class="mt-3">Compounding Interval:</h6>
                                   <div id="term">
-                                        <div class="custom-control custom-radio mt-3">
+                                        <div class="custom-control custom-radio">
                                                 <input type="radio" id="yearly" name="customRadio" class="custom-control-input">
                                                 <label class="custom-control-label" for="yearly">Yearly</label>
                                                 
@@ -90,11 +84,10 @@
                                       </div>
 
                                 <div id="results">
-                                    <h5>Results </h5>
-                                    <h6>Total Value: </h5>
-                                    <h6 id="total-value">621</h6>
+                                    <h6>Total Value Earned: </h5>
+                                    <h6 id="total-value" style="color: green"></h6>
                                     <h6>Interest Earned: </h6>
-                                    <h6 id="interest-earned">21</h6>
+                                    <h6 id="interest-earned" style="color: rgb(15, 146, 15)"></h6>
 
                                 </div>
                                 
