@@ -1,0 +1,64 @@
+!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+</head>
+<body background="/assets/dollar-sign.jpg">
+    <div class="container">
+        <div class="mx-auto mt-3 text-center">
+            <h3 style="color:dimgrey">Compound Interest Calculator</h3>
+            <h4 style="color:dimgrey">by Arshad Umrethi</h4>
+        </div>
+        <nav class="navbar navbar-expand-sm">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">                        
+                     <a class="nav-item nav-link mr-3 active" style="font-size: 16pt" href="/index.html">Home</a>
+                     <a class="nav-item nav-link mr-3 active" style="font-size: 16pt" href="/pages/path2billion.html">Path to $1 Billion</a>
+                     <a class="nav-item nav-link active" style="font-size: 16pt" href="/pages/anecdote.html">An Anecdote</a>
+                                
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-6 mx-auto mt-3">
+                <div class="card">
+                    <div class="card-body">
+                            <p>The goal of this page, is to show you the power of compounding by showing you how many years it would take for a certain 
+                                principal amount to reach 1 Billion dollars at any average interest rate you can get. 
+                            </p>
+                            <p>For example a Hundred thousand at 10% interest would reach 1 Billion in 96 Years. 
+                                    Go ahead and try it! Try 1 million at 18% </p>    
+                            <hr>
+                            <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm">Principal :</span>
+                                        </div>
+                                            <input type="text" class="form-control" id="principal" placeholder="Enter Amount..">
+                                        </div>
+                                      
+                                      <div class="input-group input-group-sm mt-3">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text" id="inputGroup-sizing-default">Interest %:</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="interest" placeholder="Enter Number..">
+                                      </div>
+                                      <button type="button" class="btn btn-primary mt-3 mb-2" id="calculate">Calculate</button>
+                                      <h6 class="mt-2" style="color: Black" id="num-years"></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+
+    <script src="/js/script2.js"></script>
+</body>
+</html>
