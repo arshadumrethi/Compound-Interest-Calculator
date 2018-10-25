@@ -13,27 +13,26 @@
             <h3 style="color:dimgrey">Compount Interest Calculator</h3>
             <h4 style="color:dimgrey">by Arshad Umrethi</h4>
         </div>
-        <nav class="navbar">
-                <a class="nav-item nav-link" href="#">Home</a>
-                <a class="nav-item nav-link" href="#">Path to 1 Billion</a>     
-              </nav>
+              <nav class="navbar navbar-expand-sm">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav mx-auto">                        
+                        <a class="nav-item nav-link mr-3 active" style="font-size: 16pt" href="/index/html">Home</a>
+                        <a class="nav-item nav-link active" style="font-size: 16pt" href="/path2billion.html">Path to $1 Billion</a>
+                        
+                      </div>
+                    </div>
+                  </nav>
         <div class="row">
             <div class="col-6 mx-auto mt-3">
                 <div class="card-group">
                     <div class="card">
-                      
                       <div class="card-body">
-                        <h5 class="card-title"></h5>
-
-                        
-                            <div class="input-group input-group-sm">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-sm">Principal :</span>
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Principal :</span>
                                 </div>
-                                    <input type="text" class="form-control" id="base-amount" placeholder="Enter Amount you start with..">
+                                    <input type="text" class="form-control" id="base-amount" placeholder="Enter Amount..">
                                 </div>
-                       
-                        
                               
                               <div class="input-group input-group-sm mt-3">
                                 <div class="input-group-prepend">
@@ -44,7 +43,7 @@
                               
                               <div class="input-group input-group-sm mt-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="">Period:</span>
+                                  <span class="input-group-text" id="">Period :</span>
                                 </div>
                                 <input type="text" class="form-control" id="period" placeholder="Enter number of Years..">
                               </div>
@@ -59,24 +58,23 @@
                                   <h6 class="mt-3">Compounding Interval:</h6>
                                   <div id="term">
                                         <div class="custom-control custom-radio">
-                                                <input type="radio" id="yearly" name="customRadio" class="custom-control-input">
-                                                <label class="custom-control-label" for="yearly">Yearly</label>
-                                                
-                                              </div>
+                                            <input type="radio" id="yearly" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="yearly">Yearly</label>                                             
+                                        </div>
         
-                                              <div class="custom-control custom-radio">
-                                                <input type="radio" id="quarterly" name="customRadio" class="custom-control-input">
-                                                <label class="custom-control-label" for="quarterly">Quarterly</label>
-                                              </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="quarterly" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="quarterly">Quarterly</label>
+                                        </div>
 
-                                              <div class="custom-control custom-radio">
-                                                    <input type="radio" id="monthly" name="customRadio" class="custom-control-input">
-                                                    <label class="custom-control-label" for="monthly">Monthly</label>
-                                                </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="monthly" name="customRadio" class="custom-control-input">
+                                            <label class="custom-control-label" for="monthly">Monthly</label>
+                                        </div>
                                   </div>
                                   
 
-                                      <button type="button" class="btn btn-primary mt-5 mb-2" id="calculate">Calculate</button>
+                                <button type="button" class="btn btn-primary mt-3 mb-2" id="calculate">Calculate</button>
                                 <hr>
 
                                 <div id="loading">
@@ -91,16 +89,10 @@
 
                                 </div>
                                 
-
-                        
                       </div>
                     </div>
-                    
                   </div>  
-
-                  
-            </div>
-            
+            </div> 
         </div>
     </div>
 <script src="script.js"></script>
