@@ -8,30 +8,37 @@ const intervalQuarterly = document.getElementById('quarterly');
 const intervalMonthly = document.getElementById('monthly');
 const calculateBtn = document.getElementById('calculate');
 
+//Hide Elements of next state.
 document.getElementById('loading').style.display = 'none'
 document.getElementById('results').style.display = 'none';
 
+//Call Main function
 calculateBtn.addEventListener('click', function(){
+    //Display loading
     document.getElementById('results').style.display = 'none';
     document.getElementById('loading').style.display = 'block';
     
+    //Run Calculation after 2 seconds
     setTimeout(runApp, 2000);
 
+    
     function runApp () {
         document.getElementById('loading').style.display = 'none';
         
+        //Declare shorter var names to improve readability
         let PV = baseAmount.value;
         let i = interestRate.value/100;
         let n = period.value;
         let A = deposit.value;
     
-
+        //Compute functions for different Time periods
         function computeYearly () {
             let annuity = Math.round(A * (Math.pow(1 + i, n) - 1)/ i)
             let yearlyResult = Math.round(PV * Math.pow(1 + i, n)) + annuity;
             let interestValue = yearlyResult - baseAmount.value;
             
-            document.getElementById('total-value').textContent = "$" + yearlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            //Display results and use Regex to include commas in numbers
+            document.getElementById('total-value').textContent = "$" + yearlyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //
             document.getElementById('interest-earned').textContent = "$" + interestValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");;
             document.getElementById('results').style.display = 'block';
         }
@@ -54,6 +61,7 @@ calculateBtn.addEventListener('click', function(){
             document.getElementById('results').style.display = 'block';
         }
         
+        //Check which option is selected
         if (intervalYearly.checked == true) {
             computeYearly()
         } else if (intervalQuarterly.checked == true) {
